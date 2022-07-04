@@ -21,4 +21,8 @@ Then you can run :
 docker-compose -f server/docker-compose.yml up -d
 ```
 You can login https://localhost with username=testuser, password=testpw for authentication before access into UI of Apollo
+You can create user with password by CLI: 
+```bash
+htpasswd ./auth/nginx.htpasswd another_user
+```
 
