@@ -11,11 +11,7 @@ This allows you to package your Prefect instance for Kubernetes or offline use.
 
 
 ## Run the server
-
-Open and edit the [`server/.env`](./server/.env) file.  
-All `PREFECT_SERVER_*` options are [explained in the official documentation](https://docs.prefect.io/core/concepts/configuration.html#environment-variables) and [listed in the `config.toml` file](https://github.com/PrefectHQ/prefect/blob/master/src/prefect/config.toml).
-
-Then you can run :
+you can run :
 
 ```bash
 docker-compose -f server/docker-compose.yml up -d
