@@ -11,8 +11,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
-#    ports:
-#      - 5432:5432
     volumes:
         - postgres:/var/lib/postgresql/data
     image: postgres:11
@@ -123,14 +121,11 @@ services:
     image: prefecthq/ui:core-1.2.2
     networks:
       - default
-#    ports:
-#      - 8080:8080/tcp
     restart: always
   nginx:
     depends_on:
       - ui
     build: ./
-#    image: "nginx:alpine"
     ports:
       - 443:443
     volumes:
